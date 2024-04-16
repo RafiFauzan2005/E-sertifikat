@@ -1,0 +1,95 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R
+/OpenAction 8 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+]
+/Count 1
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 9 0 R
+/F2 10 0 R
+>>
+>>
+/MediaBox [0.000 0.000 841.890 595.280]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20240413083348+02'00')
+/ModDate (D:20240413083348+02'00')
+/Title (Download Sertifikat)
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 275 >>
+stream
+
+0.000 0.000 0.000 rg
+BT 321.609 514.704 Td /F1 24.0 Tf  [(SMK YAJ DEPOK)] TJ ET
+BT 350.787 473.856 Td /F2 12.0 Tf  [(Telah mengikuti pelatihan IT)] TJ ET
+BT 343.185 428.646 Td /F1 18.0 Tf  [(Setiajaya Mobilindo)] TJ ET
+BT 392.949 389.316 Td /F2 12.0 Tf  [(2024-03-17)] TJ ET
+endstream
+endobj
+8 0 obj
+[6 0 R /Fit]
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000008 00000 n 
+0000000091 00000 n 
+0000000137 00000 n 
+0000000302 00000 n 
+0000000331 00000 n 
+0000000474 00000 n 
+0000000537 00000 n 
+0000000863 00000 n 
+0000000891 00000 n 
+0000000999 00000 n 
+trailer
+<<
+/Size 11
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+1109
+%%EOF
