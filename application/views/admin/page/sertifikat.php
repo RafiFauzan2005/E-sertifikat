@@ -24,7 +24,7 @@
                     </div>
                     <div class="modal-body">
                         <form class="user" method="post" action="<?= base_url('Admin/Sertifikat/TambahSertifikat') ?>">
-                            <label for="event_name">Nama Peserta</label>
+                            <label for="event_name" class="form-label">Nama Peserta</label>
                             <select class="form-select" aria-label="Default select example" name="participant_name">
                                 <option selected>--Nama Peserta--</option>
                                 <?php foreach ($data_user as $user): ?>
@@ -34,7 +34,7 @@
                                 <?php endforeach ?>
                             </select>
                             <br>
-                            <label for="event_name">Nama Kegiatan</label>
+                            <label for="event_name" class="form-label">Nama Kegiatan</label>
                             <select class="form-select" aria-label="Default select example" name="event_name">
                                 <option selected>--Nama Kegiatan--</option>
                                 <?php foreach ($data_event as $event): ?>
@@ -45,7 +45,7 @@
                             </select>
                             <br>
                             <div class="form-group">
-                                <label for="event_date">Tanggal Kegiatan</label>
+                                <label for="event_date" class="form-label">Tanggal Kegiatan</label>
                                 <select class="form-select" aria-label="Default select example" name="event_date">
                                 <option selected>--Tanggal Kegiatan--</option>
                                 <?php foreach ($data_event as $event): ?>
@@ -57,15 +57,17 @@
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="certificate_text">Deskripsi Sertifikat</label>
+                                <label for="certificate_text" class="form-label">Deskripsi Sertifikat</label>
                                 <input type="text" class="form-control" name="certificate_text" placeholder="" required>
                             </div>
+                            <br>
                             <div class="form-group">
-                                <label for="position">Jabatan Penanda Tangan</label>
+                                <label for="position" class="form-label">Jabatan Penanda Tangan</label>
                                 <input type="text" class="form-control" name="position" placeholder="" required>
                             </div>
+                            <br>
                             <div class="form-group">
-                                <label for="signed">Nama Penanda Tangan</label>
+                                <label for="signed" class="form-label">Nama Penanda Tangan</label>
                                 <input type="text" class="form-control" name="signed" placeholder="" required>
                             </div>
                     </div>

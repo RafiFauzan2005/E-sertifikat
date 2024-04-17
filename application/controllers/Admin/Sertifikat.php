@@ -71,6 +71,7 @@ class Sertifikat extends CI_Controller
 		$certificate_text = $this->input->post('certificate_text');
 		$position = $this->input->post('position');
 		$signed = $this->input->post('signed');
+		
 
 		$data = array(
 			'participant_name' 	=> $participant_name,

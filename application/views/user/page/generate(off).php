@@ -39,7 +39,7 @@
                                 <?php echo $gnrt->event_id ?>
                             </td>
                             <td class="text-center">
-                                <a class="btn btn-warning" href="<?= base_url('Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>">Download</a>
+                                <a class="btn btn-warning" href="<?= base_url('Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>" target="_blank">Download</a>
                             </td>
                         <?php endforeach ?>
                     </tr>

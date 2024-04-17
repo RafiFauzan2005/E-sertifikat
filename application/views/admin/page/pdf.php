@@ -3,14 +3,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Sertifikat</title>
+    <style>
+        .backround {
+            background-image: url('assets/img/template.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head><body>
-     
+        
+        <div class="backround">
         <center>
-        <hr>
-        <br style="line-height: 5;">
-        <h1>SERTIFIKAT PENGHARGAAN</h1>
+        <br style="line-height: 4;">
+        <h1 style="font-family: 'Roboto', sans-serif;">SERTIFIKAT PENGHARGAAN</h1>
         <hr style="width: 45%;">
-        <h2>Diberikan Kepada:</h2>
+        <h2 style="font-family: 'Roboto', sans-serif;">Diberikan Kepada:</h2>
+        <br style="line-height: 4;">
         <h1><?= $data_user->full_name ?></h1>
         <hr style="width: 50%;">
         <p ><?= $data_sertifikat->certificate_text ?> <?= $data_event->event_name ?>  yang diselenggarakan oleh <?= $data_event->organizer ?></p>
@@ -19,10 +28,11 @@
         <p>Pada tanggal : <?= $data_event->event_date ?></p>
         <br style="line-height: 4">
         <p><?= $data_sertifikat->position ?></p>
-        <br style="line-height: 5;">
+        <img style="position: relative; width: 100px;" src="assets/img/TTD.png" alt="Tanda Tangan">
+        <br style="line-height: 4;">
         <p><?= $data_sertifikat->signed ?></p>
-        <br style="line-height: 7;">
-        <hr>
+        <br style="line-height: 5;">
         </center>
+        </div>
 
 </body></html>

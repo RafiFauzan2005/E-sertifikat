@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-gray-800">Generate Sertifikat</h1>
+    <h1 class="h3 mb-2 text-gray-800">Download Sertifikat</h1>
     <center>
         <?= $this->session->flashdata('message'); ?>
     </center>
@@ -22,8 +22,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="user" method="post" action="<?= base_url('Admin/Generate_Sertifikat/TambahGenerate') ?>">
-                            <label for="event_name">Sertifikat</label>
+                        <form class="user" method="post"
+                            action="<?= base_url('Admin/Generate_Sertifikat/TambahGenerate') ?>">
+                            <label for="event_name" class="form-label">Sertifikat</label>
                             <select class="form-select" aria-label="Default select example" name="certificate_id">
                                 <option selected>--Pilih Sertifikat--</option>
                                 <?php foreach ($data_sertifikat as $sertifikat): ?>
@@ -33,7 +34,7 @@
                                 <?php endforeach ?>
                             </select>
                             <br>
-                            <label for="event_name">Nama Peserta</label>
+                            <label for="event_name" class="form-label">Nama Peserta</label>
                             <select class="form-select" aria-label="Default select example" name="user_id">
                                 <option selected>--Pilih User--</option>
                                 <?php foreach ($data_user as $user): ?>
@@ -43,7 +44,7 @@
                                 <?php endforeach ?>
                             </select>
                             <br>
-                            <label for="event_name">Nama Kegiatan</label>
+                            <label for="event_name" class="form-label">Nama Kegiatan</label>
                             <select class="form-select" aria-label="Default select example" name="event_id">
                                 <option selected>--Pilih Event--</option>
                                 <?php foreach ($data_event as $event): ?>
@@ -91,7 +92,9 @@
                                 <?php echo $gnrt->event_id ?>
                             </td>
                             <td class="text-center">
-                                <a class="btn btn-warning" href="<?php echo base_url('Admin/Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>">Download</a>
+                                <a class="btn btn-warning"
+                                    href="<?php echo base_url('Admin/Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>"
+                                    target="_blank">Download</a>
                                 |
                                 <a class="btn btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#staticBackdrophapus<?= $gnrt->assignment_id ?>">Hapus</a>

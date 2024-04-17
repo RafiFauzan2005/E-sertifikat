@@ -24,22 +24,22 @@
                     <div class="modal-body">
                         <form class="user" method="post" action="<?= base_url('Admin/Event/TambahEvent') ?>">
                             <div class="form-group">
-                                <label for="event_name">Nama Kegiatan</label>
+                                <label for="event_name" class="form-label">Nama Kegiatan</label>
                                 <input type="text" class="form-control" placeholder="" name="event_name" required>
                             </div> 
                             <br>
                             <div class="form-group">
-                                <label for="event_date">Tanggal Kegiatan</label>
+                                <label for="event_date" class="form-label">Tanggal Kegiatan</label>
                                 <input type="date" class="form-control" name="event_date" placeholder="" required>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="location">Lokasi Kegiatan</label>
+                                <label for="location" class="form-label">Lokasi Kegiatan</label>
                                 <input type="text" class="form-control" name="location" placeholder="" required>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label for="organizer">Penyelenggara Kegiatan</label>
+                                <label for="organizer" class="form-label">Penyelenggara Kegiatan</label>
                                 <input type="text" class="form-control" name="organizer" placeholder="" required>
                             </div>
                     </div>

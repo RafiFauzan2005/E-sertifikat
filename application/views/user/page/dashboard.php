@@ -28,7 +28,7 @@
             foreach ($generate as $gnrt): ?>
               <td class="text-center">
                 <a class="btn btn-warning"
-                  href="<?php echo base_url('Admin/Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>">Download</a>
+                  href="<?php echo base_url('Admin/Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>" target="_blank">Download</a>
               </td>
             <?php endforeach ?>
           </tr>
