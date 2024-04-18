@@ -38,10 +38,12 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                             <div class="message-body">
-                                <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                <?php foreach ($data_user as $user) : ?>
+                                <a href="<?= base_url('Data_user/index/' .$user->user_id) ?>" class="d-flex align-items-center gap-2 dropdown-item">
                                     <i class="ti ti-user fs-6"></i>
                                     <p class="mb-0 fs-3">My Profile</p>
                                 </a>
+                                <?php endforeach ?>
                                 <Logout class="btn btn-outline-primary mx-3 mt-2 d-block" data-bs-toggle="modal"
                                     data-bs-target="#staticBackdroplogout">Logout</a>
                             </div>

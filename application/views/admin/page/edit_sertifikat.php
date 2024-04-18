@@ -14,19 +14,20 @@
                         <div class="card">
                             <div class="card-body">
                             <form class="user" method="post" action="<?= base_url('Admin/Sertifikat/EditSertifikat/' . $data_sertifikat->certificate_id) ?>">
-                                <label for="participant_name">Nama Peserta</label>
-                                <select class="form-select" aria-label="Default select example" name="participant_name">
-                                    <option selected></option>
+                                <label for="participant_name" class="form-label">Nama Peserta</label>
+                                <select class="form-select" aria-label="Default select example" name="user_id">
+                                <option selected></option>
+                                    <option selected>--Nama Peserta--</option>
                                     <?php foreach ($data_user as $user): ?>
-                                    <option value="<?= $user->full_name ?>">
+                                    <option value="<?= $user->user_id ?>">
                                         <?= $user->full_name ?>
                                     </option>
                                     <?php endforeach ?>
                                 </select>
                                 <br>
-                                <label for="event_name">Nama Kegiatan</label>
+                                <label for="event_name" class="form-label">Nama Kegiatan</label>
                                 <select class="form-select" aria-label="Default select example" name="event_name">
-                                    <option selected></option>
+                                    <option selected>--Nama Kegiatan--</option>
                                     <?php foreach ($data_event as $event): ?>
                                     <option value="<?= $event->event_name ?>">
                                         <?= $event->event_name ?>
@@ -35,27 +36,35 @@
                                 </select>
                                 <br>
                                 <div class="form-group">
-                                    <label for="event_date">Tanggal Kegiatan</label>
-                                    <input type="date" class="form-control" name="event_date" placeholder="" value="<?= $data_sertifikat->event_date ?>" required>
-                                </div>
+                                <label for="event_date" class="form-label">Tanggal Kegiatan</label>
+                                <select class="form-select" aria-label="Default select example" name="event_date">
+                                <option selected>--Tanggal Kegiatan--</option>
+                                <?php foreach ($data_event as $event): ?>
+                                    <option value="<?= $event->event_date ?>">
+                                        <?= $event->event_date ?>
+                                    </option>
+                                <?php endforeach ?>
+                            </select>
+                            </div>
                                 <br>
                                 <div class="form-group">
-                                    <label for="certificate_text">Deskripsi Sertifikat</label>
+                                    <label for="certificate_text" class="form-label">Deskripsi Sertifikat</label>
                                     <input type="text" class="form-control" name="certificate_text" placeholder="" value="<?= $data_sertifikat->certificate_text ?>" required>
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <label for="position">Jabatan Penanda Tangan</label>
+                                    <label for="position" class="form-label">Jabatan Penanda Tangan</label>
                                     <input type="text" class="form-control" name="position" value=" <?php echo $data_sertifikat->position ?>" placeholder="" required>
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <label for="signed">Nama Penanda Tangan</label>
+                                    <label for="signed" class="form-label">Nama Penanda Tangan</label>
                                     <input type="text" class="form-control" name="signed" value=" <?php echo $data_sertifikat->signed ?>"placeholder="" required>
                                 </div>
                                 <br>
-                                <a class="btn btn-danger" href="<?= base_url('Admin/Sertifikat') ?>">Batal</a>
                                 <button type="submit" class="btn btn-success">Edit</button>
+                                <button type="reset" class="btn btn-primary">Reset</button>
+                                <a class="btn btn-danger" href="<?= base_url('Admin/Sertifikat') ?>">Batal</a>
                             </div>
                         </div>
                     </div>

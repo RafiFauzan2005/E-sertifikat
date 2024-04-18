@@ -34,7 +34,8 @@ class Register extends CI_Controller
         ),
         'full_name' => $this->input->post('full_name', true),
         'email' => htmlspecialchars($this->input->post('email', true)),
-        'role_id' => 2
+        'role_id' => 2,
+        'status' => 'belum dikonfirmasi'
       ];
 
       $this->db->insert('users', $data);

@@ -1,4 +1,7 @@
 <div class="container-fluid">
+  <center>
+    <?= $this->session->flashdata('message'); ?>
+  </center>
   <div class="col-lg-">
     <div class="card text-center" style="width: rem;">
       <div class="card-body">
@@ -18,7 +21,7 @@
           foreach ($data_sertifikat as $sertifikat): ?>
             <tr>
               <td class="text-center">
-                <?php echo $no++  ?>
+                <?php echo $no++ ?>
               </td>
               <td class="text-center">
                 <?php echo $sertifikat->event_name ?>
@@ -28,7 +31,8 @@
             foreach ($generate as $gnrt): ?>
               <td class="text-center">
                 <a class="btn btn-warning"
-                  href="<?php echo base_url('Admin/Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>" target="_blank">Download</a>
+                  href="<?php echo base_url('Admin/Generate_Sertifikat/pdf/' . $gnrt->assignment_id) ?>"
+                  target="_blank">Download</a>
               </td>
             <?php endforeach ?>
           </tr>

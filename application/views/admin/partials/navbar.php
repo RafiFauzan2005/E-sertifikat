@@ -47,6 +47,14 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
+                            <a class="sidebar-link" href="<?php echo base_url('Admin/Data_user') ?>" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <span class="hide-menu">Data User</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="<?php echo base_url('Admin/Generate_Sertifikat') ?>" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-login"></i>

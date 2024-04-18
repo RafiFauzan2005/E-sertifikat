@@ -74,13 +74,10 @@ class Generate_Sertifikat extends CI_Controller
 	{
 		$data_sertifikat = $this->Inimodel->sertifikat_detail($id);
 		$data_event = $this->Inimodel->event_detail($id);
-		$data_user = $this->Inimodel->user_detail($id);
 		$this->load->library('dompdf_gen');
 
 		$data['data_sertifikat'] = $data_sertifikat;
-		
 		$data['data_event'] = $data_event;
-		$data['data_user'] = $data_user;
 
 		$this->load->library('dompdf_gen');
 		$this->load->view('admin/page/pdf', $data);

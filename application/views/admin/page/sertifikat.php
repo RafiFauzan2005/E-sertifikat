@@ -25,10 +25,10 @@
                     <div class="modal-body">
                         <form class="user" method="post" action="<?= base_url('Admin/Sertifikat/TambahSertifikat') ?>">
                             <label for="event_name" class="form-label">Nama Peserta</label>
-                            <select class="form-select" aria-label="Default select example" name="participant_name">
+                            <select class="form-select" aria-label="Default select example" name="user_id">
                                 <option selected>--Nama Peserta--</option>
                                 <?php foreach ($data_user as $user): ?>
-                                    <option value="<?= $user->full_name ?>">
+                                    <option value="<?= $user->user_id ?>">
                                         <?= $user->full_name ?>
                                     </option>
                                 <?php endforeach ?>
@@ -102,7 +102,7 @@
                             <?php echo $sertifikat->certificate_id ?>
                             </td>
                             <td>
-                                <?php echo $sertifikat->participant_name ?>
+                                <?php echo $sertifikat->full_name ?>
                             </td>
                             <td>
                                 <?php echo $sertifikat->event_name ?>
@@ -128,7 +128,7 @@
                                     data-bs-target="#staticBackdrophapus<?= $sertifikat->certificate_id ?>">Hapus</a>
                             </td>
                         <?php endforeach ?>
-                        <!-- Modal Edit Event -->
+                        <!-- Modal Edit Sertifikat -->
                         <?php foreach ($data_sertifikat as $sertifikat): ?>
                             <div class="modal fade" id="staticBackdropedit<?= $sertifikat->certificate_id ?>"
                                 data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

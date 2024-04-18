@@ -36,7 +36,9 @@ class Dashboard extends CI_Controller
 		$user = $user_id['user_id'];
 		$data_sertifikat = $this->db->query("SELECT * FROM certificates WHERE certificate_id=$user")->result();
 		$generate = $this->db->query("SELECT * FROM certificate_assignments WHERE user_id=$user")->result();
-
+		$data_user = $this->db->query("SELECT * FROM users WHERE role_id='user'")->result();
+		
+		$data['data_user'] = $data_user;
 		$data['data_sertifikat'] = $data_sertifikat;
 		$data['generate'] = $generate;
 

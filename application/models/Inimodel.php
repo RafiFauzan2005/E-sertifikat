@@ -9,6 +9,20 @@ class Inimodel extends CI_Model
         $query = $this->db->get('users');
         return $query->row();
     }
+    public function HapusUser($data, $table)
+    {
+        $this->db->delete($table, $data);
+    }
+    public function EditUser($user_id, $data)
+    {
+        $this->db->where('user_id', $user_id);
+        $this->db->update('users', $data);
+    }
+    public function get_user()
+    {
+        $query = $this->db->get('users');
+        return $query->result();
+    }
     public function get_event()
     {
         $query = $this->db->get('events');
@@ -36,12 +50,14 @@ class Inimodel extends CI_Model
     }
     public function get_sertifikat()
     {
+        $this->db->join('users', 'users.user_id = certificates.user_id', 'left');
         $query = $this->db->get('certificates');
         return $query->result();
         
     }
     public function sertifikat_detail($id)
     {
+        $this->db->join('users', 'users.user_id = certificates.user_id', 'left');
         $this->db->where('certificate_id', $id);
         $query = $this->db->get('certificates');
         return $query->row();

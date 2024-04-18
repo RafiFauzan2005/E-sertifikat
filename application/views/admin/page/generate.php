@@ -37,9 +37,9 @@
                             <label for="event_name" class="form-label">Nama Peserta</label>
                             <select class="form-select" aria-label="Default select example" name="user_id">
                                 <option selected>--Pilih User--</option>
-                                <?php foreach ($data_user as $user): ?>
-                                    <option value="<?= $user->user_id ?>">
-                                        <?= $user->full_name ?>
+                                <?php foreach ($data_sertifikat as $sertifikat): ?>
+                                    <option value="<?= $sertifikat->user_id ?>">
+                                        <?= $sertifikat->full_name ?>
                                     </option>
                                 <?php endforeach ?>
                             </select>

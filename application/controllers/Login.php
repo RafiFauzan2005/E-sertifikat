@@ -56,8 +56,9 @@ class Login extends CI_Controller
 				if ($user['role_id'] == 'admin'){
 					redirect('Admin/Dashboard');
 				} else {	
-					redirect('Dashboard');
-				}
+						redirect('Dashboard');{
+						}
+					}
 			} else {
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password salah</div>');
 				redirect('Login');

@@ -37,14 +37,14 @@ class Sertifikat extends CI_Controller
 		$data_event = $this->Inimodel->get_event();
 		$data_user = $this->db->query("SELECT * FROM users WHERE role_id='user'")->result();
 
-		$DATA['data_sertifikat'] = $data_sertifikat;
-		$DATA['data_event'] = $data_event;
-		$DATA['data_user'] = $data_user;
+		$data['data_sertifikat'] = $data_sertifikat;
+		$data['data_event'] = $data_event;
+		$data['data_user'] = $data_user;
 
 		$title['title'] = 'sertifikat';
 		$this->load->view('admin/partials/navbar');
 		$this->load->view('admin/partials/header', $title);
-		$this->load->view('admin/page/sertifikat', $DATA);
+		$this->load->view('admin/page/sertifikat', $data);
 		$this->load->view('admin/partials/footer');
 	}
 	public function Edit_Sertifikat($id)
@@ -57,7 +57,7 @@ class Sertifikat extends CI_Controller
 		$DATA['data_event'] = $data_event;
 		$DATA['data_user'] = $data_user;
 
-		$title['title'] = 'Edit_Sertifikat';
+		$title['title'] = 'Edit Sertifikat';
 		$this->load->view('admin/partials/navbar');
 		$this->load->view('admin/partials/header', $title);
 		$this->load->view('admin/page/edit_sertifikat', $DATA);
@@ -65,7 +65,7 @@ class Sertifikat extends CI_Controller
 	}
 	public function TambahSertifikat()
 	{
-		$participant_name = $this->input->post('participant_name');
+		$user_id = $this->input->post('user_id');
 		$event_name = $this->input->post('event_name');
 		$event_date = $this->input->post('event_date');
 		$certificate_text = $this->input->post('certificate_text');
@@ -74,7 +74,7 @@ class Sertifikat extends CI_Controller
 		
 
 		$data = array(
-			'participant_name' 	=> $participant_name,
+			'user_id' 			=> $user_id,
 			'event_name' 		=> $event_name,
 			'event_date' 		=> $event_date,
 			'certificate_text' 	=> $certificate_text,
@@ -97,7 +97,7 @@ class Sertifikat extends CI_Controller
 	{
 		$data = array(
 			'certificate_id' => $certificate_id,
-			'participant_name' => $this->input->post('participant_name'),
+			'user_id' => $this->input->post('user_id'),
 			'event_name' => $this->input->post('event_name'),
 			'event_date' => $this->input->post('event_date'),
 			'certificate_text' => $this->input->post('certificate_text'),
